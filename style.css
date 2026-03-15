@@ -13,9 +13,11 @@ body {
 
 /* Logo styling */
 .logo {
-  height: 80px;        /* Adjust size */
-  margin-right: 15px;  /* Space between logo and links */
+  height: 40px;
+  width: auto;
+  margin-right: 15px;
 }
+
 /* ------------------------------
    Navigation Bar
 ------------------------------ */
