@@ -16,8 +16,8 @@ body {
 ------------------------------ */
 
 nav {
-  background-color: #0a3d91; /* deep business blue */
-  padding: 15px 25px;
+  background-color: white;
+  padding: 15px 40px;
   display: flex;
   gap: 20px;
 }
