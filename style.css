@@ -181,6 +181,11 @@ p a {
   font-weight: bold;
 }
 
+li a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
 /*spaces*/
 
 .big-space {
