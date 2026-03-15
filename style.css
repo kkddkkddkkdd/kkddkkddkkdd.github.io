@@ -162,6 +162,7 @@ footer {
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+  padding-bottom: 10px;
 }
 
 /* Highlight Services on hover */
