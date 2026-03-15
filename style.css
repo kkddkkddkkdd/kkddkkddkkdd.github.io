@@ -6,8 +6,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f8ff; /* very light blue/white */
-  color: #1a1a1a;
+  background-color:  #064172ff; /* very light blue/white */
+  color: white;
   line-height: 1.6;
 }
 
@@ -23,14 +23,14 @@ nav {
 }
 
 nav a {
-  color: #0a3d91;
+  color:  #064172ff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
 }
 
 nav a:hover {
-  color: #0a3d91;
+  color:  #064172ff;
   text-decoration: underline;
   font-weight: bold;
   font-size: 1rem;
@@ -60,7 +60,7 @@ h1, h2, h3 {
 ------------------------------ */
 
 button, .btn {
-  background-color: #0a3d91;
+  background-color: #064172ff;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -70,7 +70,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background-color: #0d4fb8;
+  background-color:  #064172ff;
 }
 
 /* ------------------------------
@@ -94,7 +94,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color: #0a3d91;
+  border-color:  #064172ff;
   outline: none;
 }
 
@@ -103,8 +103,8 @@ input:focus, textarea:focus {
 ------------------------------ */
 
 footer {
-  background-color: #0a3d91;
-  color: white;
+  background-color: white;
+  color:  #064172ff;
   text-align: right;
   padding: 15px;
   margin-top: 40px;
@@ -120,7 +120,7 @@ footer {
 
 /* Services link */
 .dropbtn {
-  color: #0a3d91;
+  color: #064172ff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -139,7 +139,7 @@ footer {
 
 /* Dropdown links */
 .dropdown-content a {
-  color: #0a3d91;
+  color: #064172ff;
   padding: 10px 15px;
   text-decoration: none;
   display: block;
@@ -148,7 +148,7 @@ footer {
 
 /* Hover effect */
 .dropdown-content a:hover {
-  background-color: #e6efff;
+  background-color: white;
 }
 
 /* Show dropdown on hover */
