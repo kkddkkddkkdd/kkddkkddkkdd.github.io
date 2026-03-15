@@ -30,7 +30,10 @@ nav a {
 }
 
 nav a:hover {
+  color: #0a3d91;
   text-decoration: underline;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /* ------------------------------
