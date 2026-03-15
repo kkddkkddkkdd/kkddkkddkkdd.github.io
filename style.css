@@ -11,6 +11,11 @@ body {
   line-height: 1.6;
 }
 
+/* Logo styling */
+.logo {
+  height: 80px;        /* Adjust size */
+  margin-right: 15px;  /* Space between logo and links */
+}
 /* ------------------------------
    Navigation Bar
 ------------------------------ */
@@ -162,11 +167,7 @@ footer {
   text-decoration: underline;
 }
 
-/* Logo styling */
-.logo {
-  height: 160px;        /* Adjust size */
-  margin-right: 15px;  /* Space between logo and links */
-}
+
 
 /*Links within paragraph are white*/
 p a {
