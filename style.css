@@ -166,3 +166,10 @@ footer {
   height: 40px;        /* Adjust size */
   margin-right: 30px;  /* Space between logo and links */
 }
+
+/*Links within paragraph are white*/
+p a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
