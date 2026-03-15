@@ -27,14 +27,14 @@ nav a {
   color:  #064172ff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 nav a:hover {
   color:  #064172ff;
   text-decoration: underline;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 /* ------------------------------
@@ -173,4 +173,16 @@ p a {
   color: white;
   text-decoration: underline;
   font-weight: bold;
+}
+
+/*spaces*/
+
+.big-space {
+  height: 120px;
+}
+.med-space {
+  height: 60px;
+}
+.small-space {
+  height: 30px;
 }
