@@ -57,12 +57,24 @@ nav a {
   font-size: 1.3rem;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* restores spacing between links */
+}
+
+
 nav a:hover {
   color:  #064172ff;
   text-decoration: underline;
   font-weight: bold;
   font-size: 1.3rem;
 }
+
+.hamburger {
+    display: none;
+}
+
 
 /* ------------------------------
    Page Container
@@ -213,4 +225,40 @@ li a {
   color: white;
   text-decoration: underline;
   font-weight: bold;
+}
+
+/*toggle burger menu when screen small*/
+@media (max-width: 700px) {
+
+    nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #064172ff;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    /* When menu is open */
+    .nav-links.open {
+        display: flex;
+    }
 }

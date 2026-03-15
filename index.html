@@ -9,27 +9,38 @@
 
 </head>
 
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+}
+</script>
+
 <body>
 
     <nav>
         <img src="logo.png" alt="River Scholars Logo" class="logo">
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        
-        <div class="dropdown">
-        <a href="services.html" class="dropbtn">Services ▾</a>
-            <div class="dropdown-content">
-                <a href="schoolentrance.html">School Entrance</a>
-                <a href="gcse.html">GCSE</a>
-                <a href="alevel.html">A Level</a>
-                <a href="universityadmissions.html">University Admissions</a>
-            </div>
-        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-        <a href="team.html">Our Tutors</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+                <a href="services.html" class="dropbtn">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="schoolentrance.html">School Entrance</a>
+                    <a href="gcse.html">GCSE</a>
+                    <a href="alevel.html">A Level</a>
+                    <a href="universityadmissions.html">University Admissions</a>
+                </div>
+            </div>
+
+            <a href="team.html">Our Tutors</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
+
 
     <div class="container">
         <h1>Welcome to River Scholars Tuition</h1>
