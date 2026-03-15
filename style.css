@@ -13,7 +13,7 @@ body {
 
 /* Logo styling */
 .logo {
-  height: 40px;
+  height: 80px;
   width: auto;
   margin-right: 15px;
 }
@@ -142,7 +142,9 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   border-radius: 4px;
   z-index: 10;
-  margin-top: 5px;
+  
+  margin-top: 0;       
+  padding-top: 5px
 }
 
 /* Dropdown links */
@@ -162,7 +164,7 @@ footer {
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 /* Highlight Services on hover */
