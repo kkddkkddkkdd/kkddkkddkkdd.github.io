@@ -160,3 +160,9 @@ footer {
 .dropdown:hover .dropbtn {
   text-decoration: underline;
 }
+
+/* Logo styling */
+.logo {
+  height: 40px;        /* Adjust size */
+  margin-right: 30px;  /* Space between logo and links */
+}
