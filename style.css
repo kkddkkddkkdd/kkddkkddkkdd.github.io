@@ -1,15 +1,32 @@
 /* ------------------------------
    Global Styles
 ------------------------------ */
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color:  #064172ff; /* very light blue/white */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    to bottom,
+    #064172ff 0%,
+    #064172ff 25%,
+    #4ab8e3ff 100%
+);
+
   color: white;
-  line-height: 1.6;
+  line-height: 1.4;
+  text-align: left;
+
 }
+
 
 /* Logo styling */
 .logo {
@@ -50,9 +67,10 @@ nav a:hover {
 
 .container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 20px 60px; /* left aligned */
   padding: 0 20px;
 }
+
 
 /* ------------------------------
    Headings
@@ -62,6 +80,11 @@ h1, h2, h3 {
   color: white;
   margin-bottom: 10px;
 }
+
+p {
+    font-size: 1.2rem; /* or 18px, etc. */
+}
+
 
 /* ------------------------------
    Buttons
@@ -106,6 +129,7 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+
 /* ------------------------------
    Footer
 ------------------------------ */
@@ -115,7 +139,8 @@ footer {
   color:  #064172ff;
   text-align: right;
   padding: 15px;
-  margin-top: 40px;
+  margin-top: auto;
+
 }
 /* ------------------------------
    Dropdown Menu (Fixed)
@@ -174,7 +199,7 @@ footer {
 
 
 
-/*Links within paragraph are white*/
+/*Links within paragraphs are white*/
 p a {
   color: white;
   text-decoration: underline;
@@ -185,15 +210,4 @@ li a {
   color: white;
   text-decoration: underline;
   font-weight: bold;
-}
-/*spaces*/
-
-.big-space {
-  height: 120px;
-}
-.med-space {
-  height: 60px;
-}
-.small-space {
-  height: 30px;
 }
