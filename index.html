@@ -11,9 +11,21 @@
 
 <script>
 function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('open');
+    const menu = document.querySelector('.nav-links');
+    const burger = document.querySelector('.hamburger');
+
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+
+    // Change icon
+    if (burger.classList.contains('open')) {
+        burger.textContent = "✖";
+    } else {
+        burger.textContent = "☰";
+    }
 }
 </script>
+
 
 <body>
 

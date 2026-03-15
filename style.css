@@ -261,4 +261,10 @@ li a {
     .nav-links.open {
         display: flex;
     }
+
+    /* When menu is open, turn hamburger into X */
+    .hamburger.open {
+        content: "✖";
+    }
+
 }
