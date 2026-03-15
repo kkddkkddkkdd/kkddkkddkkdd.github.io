@@ -19,6 +19,7 @@ nav {
   background-color: white;
   padding: 15px 40px;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -163,7 +164,7 @@ footer {
 
 /* Logo styling */
 .logo {
-  height: 15px;        /* Adjust size */
+  height: 20px;        /* Adjust size */
   margin-right: 30px;  /* Space between logo and links */
 }
 
