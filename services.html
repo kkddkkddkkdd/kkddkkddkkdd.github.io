@@ -17,11 +17,11 @@ function toggleMenu() {
     menu.classList.toggle('open');
     burger.classList.toggle('open');
 
-    // Change icon
+    // Use these standard symbols for consistent width
     if (burger.classList.contains('open')) {
-        burger.textContent = "✖";
+        burger.innerHTML = "&#10006;"; // Thinner 'X'
     } else {
-        burger.textContent = "☰";
+        burger.innerHTML = "&#9776;"; // Standard 'Hamburger'
     }
 }
 </script>
@@ -32,25 +32,29 @@ function toggleMenu() {
     <nav>
         <img src="logo.png" alt="River Scholars Logo" class="logo">
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-        <div class="dropdown">
-            <a href="services.html" class="dropbtn">Services ▾</a>
-            <div class="dropdown-content">
-                <a href="schoolentrance.html">School Entrance</a>
-                <a href="gcse.html">GCSE</a>
-                <a href="alevel.html">A Level</a>
-                <a href="universityadmissions.html">University Admissions</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+                <a href="services.html" class="dropbtn">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="schoolentrance.html">School Entrance</a>
+                    <a href="gcse.html">GCSE</a>
+                    <a href="alevel.html">A Level</a>
+                    <a href="universityadmissions.html">University Admissions</a>
+                </div>
             </div>
-        </div>
 
-        <a href="team.html">Our Tutors</a>
-        <a href="contact.html">Contact</a>
+            <a href="team.html">Our Tutors</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
-    
-    <div class="container">
+    <main>
+        <div class="container">
         <h1>Our Services</h1>
         <p>Select a service below to learn more.</p>
 
@@ -61,6 +65,7 @@ function toggleMenu() {
             <li><a href="universityadmissions.html">University Admissions</a></li>
         </ul>
     </div>
+    </main>
 
     <footer>
         © 2026 River Scholars Tuition
@@ -68,3 +73,4 @@ function toggleMenu() {
 
 </body>
 </html>
+

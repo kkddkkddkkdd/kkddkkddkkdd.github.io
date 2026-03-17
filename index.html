@@ -17,11 +17,11 @@ function toggleMenu() {
     menu.classList.toggle('open');
     burger.classList.toggle('open');
 
-    // Change icon
+    // Use these standard symbols for consistent width
     if (burger.classList.contains('open')) {
-        burger.textContent = "✖";
+        burger.innerHTML = "&#10006;"; // Thinner 'X'
     } else {
-        burger.textContent = "☰";
+        burger.innerHTML = "&#9776;"; // Standard 'Hamburger'
     }
 }
 </script>
@@ -53,18 +53,16 @@ function toggleMenu() {
         </div>
     </nav>
 
-
-    <div class="container">
-        <h1>Welcome to River Scholars Tuition</h1>
-        <p>We are a dedicated team of tutors made up of current students and recent graduates
-             from the University of Cambridge.</p>
-        <p>We offer private tuition for all ages and subjects; including GCSE, A Level and IB preparation,
-             University admissions mentoring and school entrance exam guidance.</p>
-        <p> <in><a href="contact.html">Contact</a><in> us here.</p>
-    </div>
-
-    <div class="big-space"></div>
-    <div class="big-space"></div>
+    <main>
+        <div class="container">
+            <h1>Welcome to River Scholars Tuition</h1>
+            <p>We are a dedicated team of tutors made up of current students and recent graduates
+                from the University of Cambridge.</p>
+            <p>We offer private tuition for all ages and subjects; including GCSE, A Level and IB preparation,
+                University admissions mentoring and school entrance exam guidance.</p>
+            <p> <in><a href="contact.html">Contact</a><in> us here.</p>
+        </div>
+    </main>
 
     <footer>
         © 2026 River Scholars Tuition

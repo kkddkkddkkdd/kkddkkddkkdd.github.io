@@ -17,14 +17,41 @@ function toggleMenu() {
     menu.classList.toggle('open');
     burger.classList.toggle('open');
 
-    // Change icon
+    // Use these standard symbols for consistent width
     if (burger.classList.contains('open')) {
-        burger.textContent = "✖";
+        burger.innerHTML = "&#10006;"; // Thinner 'X'
     } else {
-        burger.textContent = "☰";
+        burger.innerHTML = "&#9776;"; // Standard 'Hamburger'
     }
 }
+
+function sendMailto() {
+    // 1. Grab the values from the form
+    const name = document.getElementById('name').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // 2. Validate (optional but helpful)
+    if (!name || !subject || !message) {
+        alert("Please fill in all fields before sending.");
+        return;
+    }
+
+    // 3. Construct the email components
+    const yourEmail = "enquiries@riverscholars.com"; 
+    const emailSubject = encodeURIComponent("Enquiry: " + subject);
+    
+    // %0D%0A creates a line break in the email body
+    const emailBody = encodeURIComponent(
+        "Name:\n" + name + "\n\n" + 
+        "Message:\n" + message
+    );
+
+    // 4. Open the user's email client
+    window.location.href = `mailto:${yourEmail}?subject=${emailSubject}&body=${emailBody}`;
+}
 </script>
+
 
 
 <body>
@@ -32,26 +59,43 @@ function toggleMenu() {
     <nav>
         <img src="logo.png" alt="River Scholars Logo" class="logo">
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        
-        <div class="dropdown">
-        <a href="services.html" class="dropbtn">Services ▾</a>
-            <div class="dropdown-content">
-                <a href="schoolentrance.html">School Entrance</a>
-                <a href="gcse.html">GCSE</a>
-                <a href="alevel.html">A Level</a>
-                <a href="universityadmissions.html">University Admissions</a>
-            </div>
-        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-        <a href="team.html">Our Tutors</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+                <a href="services.html" class="dropbtn">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="schoolentrance.html">School Entrance</a>
+                    <a href="gcse.html">GCSE</a>
+                    <a href="alevel.html">A Level</a>
+                    <a href="universityadmissions.html">University Admissions</a>
+                </div>
+            </div>
+
+            <a href="team.html">Our Tutors</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
-    <div class="container">
-        <p>contact page not created<p>
+    <main>
+        <div class="container">
+        <h1>Contact Us</h1>
+        <p>Please email enquiries@riverscholars.co.uk directly or use the contact form below:
+        <form id="contactForm">
+            
+            <input type="text" id="name" placeholder="Your name" required>
+
+            <input type="text" id="subject" placeholder="What kind of tutoring are you looking for? (e.g GCSE maths)" required>
+
+            <textarea id="message" rows="6" placeholder="Please give as much additional information as possible here" required></textarea>
+
+            <button type="button" class="btn" onclick="sendMailto()">Send Email</button>
+        </form>
     </div>
+    </main>
 
     <footer>
         © 2026 River Scholars Tuition
@@ -59,4 +103,3 @@ function toggleMenu() {
 
 </body>
 </html>
-
