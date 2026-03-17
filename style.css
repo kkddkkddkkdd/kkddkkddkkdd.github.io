@@ -212,6 +212,15 @@ input, textarea, select, button {
     font-family: inherit;
     font-size: inherit;
 }
+input, textarea {
+    width: 100%;
+    box-sizing: border-box; 
+    max-width: 100%;       
+}
+textarea {
+    resize: vertical; 
+    min-height: 120px;
+}
 
 /* ------------------------------
    Mobile Navigation
@@ -263,5 +272,16 @@ input, textarea, select, button {
         padding: 15px 20px;
         font-size: 1.2rem;
         border-top: 1px solid #f0f0f0; /* Optional: separates links */
+    }
+
+    .container {
+        /* Reduce side margins so the white form fills more of the screen */
+        margin: 10px 15px; 
+        padding: 0 10px;
+    }
+
+    form {
+        /* Reduce internal padding of the form so inputs can be wider */
+        padding: 15px; 
     }
 }
