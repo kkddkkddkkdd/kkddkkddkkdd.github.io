@@ -71,11 +71,9 @@ nav a:hover {
   padding: 0 20px;
 }
 
-/* White panel for services page */
+/* REMOVE THE WHITE PANEL — no big white box */
 .services-page .container {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
+  /* removed background, padding, border-radius */
 }
 
 /* ------------------------------
@@ -89,7 +87,7 @@ h1, h2, h3 {
 .services-page h1,
 .services-page h2,
 .services-page h3 {
-  color: #064172ff;
+  color: white; /* keep headings white on gradient */
 }
 
 p {
@@ -191,18 +189,18 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background: #f5f5f5;
+  background: white; /* each box is white */
   border-radius: 12px;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #333;
-  border: 2px solid transparent;
+  color: #064172ff;
+  border: 2px solid #cbd3e1;
   transition: 0.25s ease;
 }
 
 .service-box:hover {
-  background: #e8e8e8;
+  background: #f0f8ff;
   border-color: #0077ff;
   transform: translateY(-4px);
 }
@@ -255,3 +253,4 @@ footer {
     padding: 0 10px;
   }
 }
+
