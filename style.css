@@ -2,8 +2,8 @@
    Global Styles
 ------------------------------ */
 html, body {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -13,7 +13,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
   color: white;
   line-height: 1.4;
   text-align: left;
@@ -35,13 +34,12 @@ main {
   height: 80px;
   width: auto;
   margin-right: 15px;
-  max-width: 40vw; /* prevents it from dominating small screens */
+  max-width: 40vw;
 }
 
 /* ------------------------------
    Navigation Bar
 ------------------------------ */
-
 nav {
   background-color: white;
   padding: 15px 15px;
@@ -52,56 +50,66 @@ nav {
 }
 
 nav a {
-  color:  #064172ff;
+  color: #064172ff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 nav a:hover {
-  color:  #064172ff;
+  color: #064172ff;
   text-decoration: underline;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
 .hamburger {
-    display: none;
+  display: none;
 }
 
 /* ------------------------------
    Page Container
 ------------------------------ */
-
 .container {
   max-width: 900px;
-  margin: 20px 60px; /* left aligned */
+  margin: 20px 60px;
   padding: 0 20px;
+}
+
+/* White panel specifically for services page */
+.services-page .container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
 }
 
 /* ------------------------------
    Headings
 ------------------------------ */
-
 h1, h2, h3 {
   color: white;
   margin-bottom: 10px;
 }
 
+.services-page h1,
+.services-page h2,
+.services-page h3 {
+  color: #064172ff;
+}
+
 p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* ------------------------------
    Buttons
 ------------------------------ */
-
 button, .btn {
   background-color: #064172ff;
   color: white;
@@ -113,13 +121,12 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background-color:  #064172ff;
+  background-color: #064172ff;
 }
 
 /* ------------------------------
    Contact Form
 ------------------------------ */
-
 form {
   background: white;
   padding: 25px;
@@ -137,17 +144,16 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color:  #064172ff;
+  border-color: #064172ff;
   outline: none;
 }
 
 /* ------------------------------
    Footer
 ------------------------------ */
-
 footer {
   background-color: white;
-  color:  #064172ff;
+  color: #064172ff;
   text-align: right;
   padding: 15px;
   margin-top: auto;
@@ -156,7 +162,6 @@ footer {
 /* ------------------------------
    Dropdown Menu 
 ------------------------------ */
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -209,17 +214,19 @@ p a, li a {
 }
 
 input, textarea, select, button {
-    font-family: inherit;
-    font-size: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
+
 input, textarea {
-    width: 100%;
-    box-sizing: border-box; 
-    max-width: 100%;       
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
 }
+
 textarea {
-    resize: vertical; 
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
 
 /* ------------------------------
@@ -227,7 +234,7 @@ textarea {
 ------------------------------ */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* max 2 columns */
   gap: 20px;
   margin-top: 30px;
 }
@@ -253,65 +260,61 @@ textarea {
   transform: translateY(-4px);
 }
 
-
 /* ------------------------------
-   Mobile Navigation
+   Mobile (services + nav)
 ------------------------------ */
-
 @media (max-width: 700px) {
-    nav {
-        display: flex;
-        flex-wrap: wrap; /* Allows the menu to drop to a new line */
-        justify-content: space-between;
-        align-items: center;
-    }
+  .services {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
 
-    .hamburger {
-        display: block;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: #064172ff;
-        cursor: pointer;
-        
-        /* Forces the button to stay square so 'X' doesn't jump */
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-        text-align: center;
-        padding: 0;
-        order: 2; /* Keeps it on the right */
-    }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .logo {
-        order: 1; /* Keeps logo on the left */
-    }
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #064172ff;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    padding: 0;
+    order: 2;
+  }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%; /* Forces the menu to its own row below the logo/burger */
-        background: white;
-        padding: 10px 0;
-        order: 3; /* Puts the links below the top row */
-    }
+  .logo {
+    order: 1;
+  }
 
-    .nav-links.open {
-        display: flex;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    order: 3;
+  }
 
-    .nav-links a {
-        padding: 15px 20px;
-        font-size: 1.2rem;
-        border-top: 1px solid #f0f0f0; /* Optional: separates links */
-    }
+  .nav-links.open {
+    display: flex;
+  }
 
-    .container {
-        /* Reduce side margins so the white form fills more of the screen */
-        margin: 10px 15px; 
-        padding: 0 10px;
-    }
+  .nav-links a {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border-top: 1px solid #f0f0f0;
+  }
 
-
-
-  
+  .container {
+    margin: 10px 15px;
+    padding: 0 10px;
+  }
+}
