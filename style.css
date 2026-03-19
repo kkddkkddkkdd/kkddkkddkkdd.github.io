@@ -125,6 +125,15 @@ input, textarea {
   margin-bottom: 15px;
   border: 1px solid #cbd3e1;
   border-radius: 4px;
+  box-sizing: border-box; 
+  max-width: 100%; 
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+    resize: none; 
+    min-height: 25px;
 }
 
 input:focus, textarea:focus {
@@ -251,8 +260,14 @@ footer {
     border-top: 1px solid #f0f0f0;
   }
 
-  .container {
-    margin: 10px 15px;
-    padding: 0 10px;
-  }
+    .container {
+        /* Reduce side margins so the white form fills more of the screen */
+        margin: 10px 15px; 
+        padding: 0 10px;
+    }
+
+    form {
+        /* Reduce internal padding of the form so inputs can be wider */
+        padding: 15px; 
+    }
 }
