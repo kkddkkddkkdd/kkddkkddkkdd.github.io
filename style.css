@@ -217,12 +217,69 @@ footer {
   transform: translateY(-4px);
 }
 
+/*Tutor bios
+
+*/
+
+.tutors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* max 3 columns */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.tutor-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 10px;
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #064172ff;
+  border: 2px solid #cbd3e1;
+  transition: 0.25s ease;
+}
+
+.tutor-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.tutor-content {
+  text-align: left;
+  color: #064172ff;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.tutor-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #064172ff;
+}
+
+.tutor-content p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #064172ff;
+}
+
+
 /* ------------------------------
    Mobile
 ------------------------------ */
 @media (max-width: 700px) {
 
   .services {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .tutors {
     grid-template-columns: 1fr; /* 1 column on mobile */
   }
 
@@ -260,14 +317,17 @@ footer {
     border-top: 1px solid #f0f0f0;
   }
 
-    .container {
-        /* Reduce side margins so the white form fills more of the screen */
-        margin: 10px 15px; 
-        padding: 0 10px;
-    }
+  .container {
+      /* Reduce side margins so the white form fills more of the screen */
+      margin: 10px 15px; 
+      padding: 0 10px;
+  }
 
-    form {
-        /* Reduce internal padding of the form so inputs can be wider */
-        padding: 15px; 
-    }
+  form {
+      /* Reduce internal padding of the form so inputs can be wider */
+      padding: 15px; 
+  }
+
+
+
 }
