@@ -28,29 +28,30 @@ function toggleMenu() {
 function sendMailto() {
     // 1. Grab the values from the form
     const name = document.getElementById('name').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    const tutoringType = document.getElementById('tutoringType').value;
+    const additionalInfo = document.getElementById('additionalInfo').value;
 
-    // 2. Validate (optional but helpful)
-    if (!name || !subject || !message) {
+    // 2. Validate
+    if (!name || !tutoringType || !additionalInfo) {
         alert("Please fill in all fields before sending.");
         return;
     }
 
-    // 3. Construct the email components
-    const yourEmail = "enquiries@riverscholars.com"; 
-    const emailSubject = encodeURIComponent("Enquiry: " + subject);
-    
-    // %0D%0A creates a line break in the email body
+    // 3. Construct the email
+    const yourEmail = "enquiries@riverscholars.co.uk";
+    const emailSubject = encodeURIComponent("Tutoring Enquiry: " +name+" " +tutoringType);
+
     const emailBody = encodeURIComponent(
-        "Name:\n" + name + "\n\n" + 
-        "Message:\n" + message
+        "Name:\n" + name + "\n\n" +
+        "Subject:\n" + tutoringType + "\n\n" +
+        "Additional Information:\n" + additionalInfo
     );
 
     // 4. Open the user's email client
     window.location.href = `mailto:${yourEmail}?subject=${emailSubject}&body=${emailBody}`;
 }
 </script>
+
 
 
 
@@ -86,17 +87,20 @@ function sendMailto() {
     <main>
         <div class="container">
         <h1>Contact Us</h1>
-        <p>Please email enquiries@riverscholars.co.uk directly or use the contact form below:
+        <p>Please email enquiries@riverscholars.co.uk directly or use the form below to create an email. <br>
+            Please click send in your email app to ensure we receive the message.
+        </p>
         <form id="contactForm">
-            
             <input type="text" id="name" placeholder="Your name" required>
-
-            <textarea id="message" rows="1" placeholder="What kind of tutoring are you looking for? (e.g GCSE maths)" required></textarea>
-
-            <textarea id="message" rows="6" placeholder="Please give as much additional information as possible here" required></textarea>
-
-            <button type="button" class="btn" onclick="sendMailto()">Send Email</button>
+            <textarea id="tutoringType" rows="1"
+                placeholder="Subject"
+                required></textarea>
+            <textarea id="additionalInfo" rows="6"
+                placeholder="Additional Information"
+                required></textarea>
+            <button type="button" class="btn" onclick="sendMailto()">Open Email</button>
         </form>
+
     </div>
     </main>
 
