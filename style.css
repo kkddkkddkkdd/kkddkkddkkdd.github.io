@@ -275,18 +275,26 @@ footer {
 ------------------------------ */
 @media (max-width: 700px) {
 
-  .services {
-    grid-template-columns: 1fr; /* 1 column on mobile */
-  }
-
+  /* --- GRID SECTIONS --- */
+  .services,
   .tutors {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
+  /* --- NAV WRAPPER --- */
   nav {
     justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
   }
 
+  /* --- HAMBURGER BUTTON --- */
   .hamburger {
     display: block;
     font-size: 2rem;
@@ -297,37 +305,51 @@ footer {
     width: 44px;
     height: 44px;
     text-align: center;
+    padding: 0;
+    line-height: 44px;
   }
 
+  /* --- NAV LINKS CONTAINER --- */
   .nav-links {
-    display: none;
     flex-direction: column;
     width: 100%;
     background: white;
-    padding: 10px 0;
+
+    /* Remove all unwanted spacing */
+    margin: 0;
+    padding: 0;
+
+    /* Slide-down animation */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
 
   .nav-links.open {
-    display: flex;
+    max-height: 300px;
+    padding: 10px 0;
   }
 
+  /* --- NAV LINKS --- */
   .nav-links a {
-    padding: 15px 20px;
+    display: block;
+    padding: 4px 8px;
     font-size: 1.2rem;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid #eaeaea;
+
+    /* Remove default spacing */
+    margin: 0;
   }
 
+  /* --- FORM CONTAINER --- */
   .container {
-      /* Reduce side margins so the white form fills more of the screen */
-      margin: 10px 15px; 
-      padding: 0 10px;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 0 10px;
   }
 
   form {
-      /* Reduce internal padding of the form so inputs can be wider */
-      padding: 15px; 
+    padding: 15px;
   }
-
-
 
 }
